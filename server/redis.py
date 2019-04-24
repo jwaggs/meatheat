@@ -15,3 +15,4 @@ def fid_devices(fid):
     app.logger.info(f'getting devices for fid: {fid}')
     devices = r.smembers(fid)
     app.logger.info(f'fid: {fid} devices: {devices}')
+    return devices

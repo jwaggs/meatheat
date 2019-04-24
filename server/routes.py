@@ -29,6 +29,3 @@ def redis_get():
     app.logger.info('redis get endpoint')
     devices = fid_devices('12345')
     return json.dumps({'fid': devices}), 200, {'ContentType': 'application/json'}
-
-
-
