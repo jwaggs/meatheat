@@ -13,7 +13,7 @@ def health_check():
 
 
 @app.route('/user/<fid>/devices/<device>/', methods=['POST', 'GET'])  # TODO: remove GET from methods
-@authenticate
+# @authenticate
 def register_device(fid, device):
     app.logger.info(f'register_device endpoint. fid: {fid} device: {device}')
     fid_add_device(fid, device)
@@ -21,7 +21,7 @@ def register_device(fid, device):
 
 
 @app.route('/user/<fid>/controllers/<controller>/', methods=['POST', 'GET'])  # TODO: remove GET from methods
-@authenticate
+# @authenticate
 def register_controller(fid, controller):
     app.logger.info(f'register_controller endpoint. fid: {fid} controller: {controller}')
     fid_add_controller(fid, controller)
@@ -37,10 +37,3 @@ def meat_heat(controller):
 
     for device in controller_devices(controller):
         send_data_to_device(data, device)
-
-
-# @app.route('/user/<fid>/devices/', methods=['GET'])
-# def get_devices(fid):
-#     app.logger.info(f'get_devices endpoint. fid: {fid}')
-#     devices = fid_devices(fid)
-#     return json.dumps({fid: devices}), 200, {'ContentType': 'application/json'}

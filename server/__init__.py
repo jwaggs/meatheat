@@ -11,5 +11,3 @@ if not os.path.isfile(fir_secret):
     fir_secret = json.loads(fir_secret)
 cred = credentials.Certificate(fir_secret)
 firebase_app = firebase_admin.initialize_app(cred)
-
-print(firebase_app.name)
