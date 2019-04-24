@@ -2,6 +2,7 @@ from .app import app
 from flask import request, json, g
 
 
+@app.route('/', methods=['GET'])
 @app.route('/health_check', methods=['GET'])
 def health_check():
     app.logger.info('health check')
