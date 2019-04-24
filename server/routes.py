@@ -31,4 +31,4 @@ def redis_get():
     response = []
     for d in devices:
         response.append(d)
-    return json.dumps({'fid': devices}), 200, {'ContentType': 'application/json'}
+    return json.dumps(response), 200, {'ContentType': 'application/json'}
