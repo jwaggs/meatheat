@@ -19,4 +19,4 @@ def send_data_to_device(data, device):
         app.logger.info(f'successfully sent message {message_id} to device: {device}')
     except Exception as e:
         # TODO: should remove device token from redis if the exception is related to it being invalid.
-        app.logger.info(f'error sending message to device: {device} with error: {e}')
+        app.logger.error(f'error sending message to device: {device} with error: {e}')
