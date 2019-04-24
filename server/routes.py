@@ -30,7 +30,7 @@ def register_controller(fid, controller):
 
 @app.route('/controllers/<controller>/state/', methods=['POST', 'GET'])  # TODO: remove GET from methods
 def meat_heat(controller):
-    app.logger.info(f'meat_heat endpoint')
+    app.logger.info(f'meat_heat endpoint hit for controller: {controller}')
     data = request.get_json()
     if not data:
         abort(400)

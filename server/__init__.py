@@ -1,9 +1,9 @@
 from .routes import *
-
-import firebase_admin
-from firebase_admin import credentials
-import os
 from flask import json
+from firebase_admin import credentials
+import firebase_admin
+import os
+
 
 fir_secret = os.getenv('MEATHEAT_FIREBASE')
 if not os.path.isfile(fir_secret):

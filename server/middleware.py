@@ -1,5 +1,5 @@
 from firebase_admin import auth
-from flask import request, abort, g
+from flask import request, abort
 from functools import wraps
 
 
