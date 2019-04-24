@@ -8,7 +8,7 @@ import string
 @app.route('/', methods=['GET'])
 @app.route('/health_check', methods=['GET'])
 def health_check():
-    app.logger.info('health check')
+    app.logger.info('app logger info health check')
     return json.dumps({'healthy': True}), 200, {'ContentType': 'application/json'}
 
 
@@ -28,4 +28,7 @@ def redis_add():
 def redis_get():
     app.logger.info('redis get endpoint')
     devices = fid_devices('12345')
+    response = []
+    for d in devices:
+        response.append(d)
     return json.dumps({'fid': devices}), 200, {'ContentType': 'application/json'}
