@@ -2,16 +2,22 @@ import os
 import redis
 from .app import app
 
-r = redis.from_url(os.environ.get("REDIS_URL"))
+redis_url = os.getenv("REDIS_URL")
+r = redis.from_url(redis_url, charset="utf-8", decode_responses=True)
 
 
-def fid_add_devices(fid, device):
+def fid_add_device(fid, device):
     app.logger.info(f'adding device: {device} to fid: {fid}')
-    res = r.sadd(device, fid)
-    app.logger.info(f'added device: {device} to fid: {fid} with result {res}')
+    r.sadd(fid, device)
+    r.sadd('all_devices', device)
 
 
 def fid_devices(fid):
     app.logger.info(f'getting devices for fid: {fid}')
-    devices = r.smembers(fid)
-    return devices
+    return list(r.smembers(fid))
+
+
+def all_devices():
+    # this is a shortcut to work around the fact that microcontrollers aren't getting paired with users yet.
+    app.logger.info(f'getting all devices')
+    return list(r.smembers('all_devices'))
