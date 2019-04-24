@@ -14,8 +14,5 @@ def send_data_to_device(data, device):
         token=device,
     )
 
-    production = app.config['FLASK_ENV'] == 'production'
-    if production:
-        message_id = messaging.send(message)
-        app.logger.info(f'successfully sent message {message_id} to device: {device}')
-
+    message_id = messaging.send(message)
+    app.logger.info(f'successfully sent message {message_id} to device: {device}')
