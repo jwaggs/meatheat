@@ -1,0 +1,7 @@
+{
+  "name": "MeatHeat",
+  "description": "The MeatHeat Server.",
+  "image": "heroku/python",
+  "repository": "https://github.com/jwaggs/meatheat",
+  "keywords": ["python", "flask" ]
+}
