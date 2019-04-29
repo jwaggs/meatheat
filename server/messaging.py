@@ -6,8 +6,11 @@ import json
 def send_data_to_device(data, device):
     app.logger.info(f'sending to device: {device}')
 
+    message_data = {
+        'payload': json.dumps(data)
+    }
     message = messaging.Message(
-        data=json.dumps(data),
+        data=message_data,
         token=device,
     )
 
