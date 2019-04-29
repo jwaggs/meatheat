@@ -15,9 +15,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
     }
 
-    
+    @objc func onDidReceiveData(_ notification:Notification) {
+        guard let data = notification.userInfo?["data"] as? String else{
+            print("registration token not found in notification about itself")
+            return
+        }
+        
+        
+    }
 }
 

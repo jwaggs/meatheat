@@ -11,10 +11,8 @@ import Alamofire
 
 class MeatHeatClient {
     
-    let baseURL = URL.init(string: "https://meatheat.herokuapp.com/")!
-    let devicesURL = "https://meatheat.herokuapp.com/devices/"
-    
-    public init() {
+    static let shared = MeatHeatClient()
+    private init() {
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveDeviceToken(_:)), name: .didReceiveFCMToken, object: nil)
     }
     
@@ -25,10 +23,10 @@ class MeatHeatClient {
         }
         
         let url = "https://meatheat.herokuapp.com/devices/\(deviceRegistrationToken)/"
-        print(url)
-        
         Alamofire.request(url, method: .post).responseData { (responseData) in
-            print(responseData)
+            if responseData.response?.statusCode != 200 {
+                print("error with code: \(responseData.response?.statusCode ?? -1) registering device token with server.")
+            }
         }
     }
 }

@@ -35,7 +35,8 @@ def meat_heat(controller):
     if not data:
         abort(400)
 
-    for device in controller_devices(controller):
+    # TODO: change to controller_devices.
+    for device in all_devices():
         send_data_to_device(data, device)
 
     return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
