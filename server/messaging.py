@@ -1,16 +1,13 @@
 from .app import app
 from firebase_admin import messaging
+import json
 
 
 def send_data_to_device(data, device):
     app.logger.info(f'sending to device: {device}')
 
-    sanitized = {}
-    for k, v in data.items():
-        sanitized[k] = str(v)
-
     message = messaging.Message(
-        data=sanitized,
+        data=json.dumps(data),
         token=device,
     )
 
