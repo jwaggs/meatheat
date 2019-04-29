@@ -37,5 +37,13 @@ def meat_heat(controller):
 
     for device in controller_devices(controller):
         send_data_to_device(data, device)
-        
+
     return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+
+
+# TODO: remove this entirely. A quick hack to get ios client working.
+@app.route('/devices/<device>/', methods=['POST'])
+def add_device_to_all(device):
+    app.logger.info(f'add_device_to_all endpoint. device: {device}')
+    all_devices(device)
+    return json.dumps({'registered': device}), 200, {'ContentType': 'application/json'}

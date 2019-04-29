@@ -1,0 +1,762 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DA7E0CFDA991B4856EC4137 /* Pods_MeatHeat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6592B51114E29CD7BE1DDF5D /* Pods_MeatHeat.framework */; };
+		5301DE77BFBB167A79BE8C32 /* Pods_MeatHeatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1AD794DECBD0476A8CFE19 /* Pods_MeatHeatTests.framework */; };
+		AAD8B0F2A393927EB4925338 /* Pods_MeatHeatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD35794F917C4BAD3F28BE7D /* Pods_MeatHeatUITests.framework */; };
+		FC530C6B22777E5B00A2FA70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC530C6A22777E5B00A2FA70 /* AppDelegate.swift */; };
+		FC530C6D22777E5B00A2FA70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC530C6C22777E5B00A2FA70 /* ViewController.swift */; };
+		FC530C7022777E5B00A2FA70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC530C6E22777E5B00A2FA70 /* Main.storyboard */; };
+		FC530C7222777E5C00A2FA70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC530C7122777E5C00A2FA70 /* Assets.xcassets */; };
+		FC530C7522777E5C00A2FA70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC530C7322777E5C00A2FA70 /* LaunchScreen.storyboard */; };
+		FC530C8022777E5C00A2FA70 /* MeatHeatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC530C7F22777E5C00A2FA70 /* MeatHeatTests.swift */; };
+		FC530C8B22777E5C00A2FA70 /* MeatHeatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC530C8A22777E5C00A2FA70 /* MeatHeatUITests.swift */; };
+		FCD4B7992277A81800B1C77D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCD4B7982277A81800B1C77D /* GoogleService-Info.plist */; };
+		FCFF99EA2277B34100BB7964 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFF99E92277B34100BB7964 /* Notifications.swift */; };
+		FCFF99EC2277B5AB00BB7964 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFF99EB2277B5AB00BB7964 /* Client.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC530C7C22777E5C00A2FA70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC530C5F22777E5B00A2FA70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC530C6622777E5B00A2FA70;
+			remoteInfo = MeatHeat;
+		};
+		FC530C8722777E5C00A2FA70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC530C5F22777E5B00A2FA70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC530C6622777E5B00A2FA70;
+			remoteInfo = MeatHeat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F5130195984B77176A66C15 /* Pods-MeatHeat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeatHeat.release.xcconfig"; path = "Target Support Files/Pods-MeatHeat/Pods-MeatHeat.release.xcconfig"; sourceTree = "<group>"; };
+		6592B51114E29CD7BE1DDF5D /* Pods_MeatHeat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeatHeat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E1AD794DECBD0476A8CFE19 /* Pods_MeatHeatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeatHeatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF0902FBB9EDF02405CC15F /* Pods-MeatHeatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeatHeatTests.release.xcconfig"; path = "Target Support Files/Pods-MeatHeatTests/Pods-MeatHeatTests.release.xcconfig"; sourceTree = "<group>"; };
+		AFFAD4FA19E4F8637E9EEE6A /* Pods-MeatHeat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeatHeat.debug.xcconfig"; path = "Target Support Files/Pods-MeatHeat/Pods-MeatHeat.debug.xcconfig"; sourceTree = "<group>"; };
+		DAE7F62054CC1BA8A5630729 /* Pods-MeatHeatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeatHeatUITests.release.xcconfig"; path = "Target Support Files/Pods-MeatHeatUITests/Pods-MeatHeatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F0BC9925E159FF39ABC003D8 /* Pods-MeatHeatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeatHeatUITests.debug.xcconfig"; path = "Target Support Files/Pods-MeatHeatUITests/Pods-MeatHeatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC530C6722777E5B00A2FA70 /* MeatHeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeatHeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC530C6A22777E5B00A2FA70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC530C6C22777E5B00A2FA70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC530C6F22777E5B00A2FA70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC530C7122777E5C00A2FA70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC530C7422777E5C00A2FA70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC530C7622777E5C00A2FA70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC530C7B22777E5C00A2FA70 /* MeatHeatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeatHeatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC530C7F22777E5C00A2FA70 /* MeatHeatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatHeatTests.swift; sourceTree = "<group>"; };
+		FC530C8122777E5C00A2FA70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC530C8622777E5C00A2FA70 /* MeatHeatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeatHeatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC530C8A22777E5C00A2FA70 /* MeatHeatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatHeatUITests.swift; sourceTree = "<group>"; };
+		FC530C8C22777E5C00A2FA70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCD4B7982277A81800B1C77D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../secrets/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FCFC19CF1A1CB833CEDDFF90 /* Pods-MeatHeatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeatHeatTests.debug.xcconfig"; path = "Target Support Files/Pods-MeatHeatTests/Pods-MeatHeatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FCFF99E92277B34100BB7964 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		FCFF99EB2277B5AB00BB7964 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		FCFF99ED2277B9E200BB7964 /* MeatHeat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeatHeat.entitlements; sourceTree = "<group>"; };
+		FD35794F917C4BAD3F28BE7D /* Pods_MeatHeatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeatHeatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC530C6422777E5B00A2FA70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA7E0CFDA991B4856EC4137 /* Pods_MeatHeat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC530C7822777E5C00A2FA70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5301DE77BFBB167A79BE8C32 /* Pods_MeatHeatTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC530C8322777E5C00A2FA70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAD8B0F2A393927EB4925338 /* Pods_MeatHeatUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DB37FAD8816EA060B21F6C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6592B51114E29CD7BE1DDF5D /* Pods_MeatHeat.framework */,
+				6E1AD794DECBD0476A8CFE19 /* Pods_MeatHeatTests.framework */,
+				FD35794F917C4BAD3F28BE7D /* Pods_MeatHeatUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D32A880D3897CCA90B48766 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFFAD4FA19E4F8637E9EEE6A /* Pods-MeatHeat.debug.xcconfig */,
+				0F5130195984B77176A66C15 /* Pods-MeatHeat.release.xcconfig */,
+				FCFC19CF1A1CB833CEDDFF90 /* Pods-MeatHeatTests.debug.xcconfig */,
+				7DF0902FBB9EDF02405CC15F /* Pods-MeatHeatTests.release.xcconfig */,
+				F0BC9925E159FF39ABC003D8 /* Pods-MeatHeatUITests.debug.xcconfig */,
+				DAE7F62054CC1BA8A5630729 /* Pods-MeatHeatUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC530C5E22777E5B00A2FA70 = {
+			isa = PBXGroup;
+			children = (
+				FC530C6922777E5B00A2FA70 /* MeatHeat */,
+				FC530C7E22777E5C00A2FA70 /* MeatHeatTests */,
+				FC530C8922777E5C00A2FA70 /* MeatHeatUITests */,
+				FC530C6822777E5B00A2FA70 /* Products */,
+				8D32A880D3897CCA90B48766 /* Pods */,
+				3DB37FAD8816EA060B21F6C0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FC530C6822777E5B00A2FA70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC530C6722777E5B00A2FA70 /* MeatHeat.app */,
+				FC530C7B22777E5C00A2FA70 /* MeatHeatTests.xctest */,
+				FC530C8622777E5C00A2FA70 /* MeatHeatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC530C6922777E5B00A2FA70 /* MeatHeat */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF99ED2277B9E200BB7964 /* MeatHeat.entitlements */,
+				FC530C7122777E5C00A2FA70 /* Assets.xcassets */,
+				FCD4B7982277A81800B1C77D /* GoogleService-Info.plist */,
+				FC530C7622777E5C00A2FA70 /* Info.plist */,
+				FC530C7322777E5C00A2FA70 /* LaunchScreen.storyboard */,
+				FC530C6E22777E5B00A2FA70 /* Main.storyboard */,
+				FC530C6A22777E5B00A2FA70 /* AppDelegate.swift */,
+				FC530C6C22777E5B00A2FA70 /* ViewController.swift */,
+				FCFF99EB2277B5AB00BB7964 /* Client.swift */,
+				FCFF99E92277B34100BB7964 /* Notifications.swift */,
+			);
+			path = MeatHeat;
+			sourceTree = "<group>";
+		};
+		FC530C7E22777E5C00A2FA70 /* MeatHeatTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC530C7F22777E5C00A2FA70 /* MeatHeatTests.swift */,
+				FC530C8122777E5C00A2FA70 /* Info.plist */,
+			);
+			path = MeatHeatTests;
+			sourceTree = "<group>";
+		};
+		FC530C8922777E5C00A2FA70 /* MeatHeatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC530C8A22777E5C00A2FA70 /* MeatHeatUITests.swift */,
+				FC530C8C22777E5C00A2FA70 /* Info.plist */,
+			);
+			path = MeatHeatUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC530C6622777E5B00A2FA70 /* MeatHeat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC530C8F22777E5C00A2FA70 /* Build configuration list for PBXNativeTarget "MeatHeat" */;
+			buildPhases = (
+				B98AE1DDAEE6283BEF6717EB /* [CP] Check Pods Manifest.lock */,
+				FC530C6322777E5B00A2FA70 /* Sources */,
+				FC530C6422777E5B00A2FA70 /* Frameworks */,
+				FC530C6522777E5B00A2FA70 /* Resources */,
+				0154C5B825FC6B449548D637 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeatHeat;
+			productName = MeatHeat;
+			productReference = FC530C6722777E5B00A2FA70 /* MeatHeat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC530C7A22777E5C00A2FA70 /* MeatHeatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC530C9222777E5C00A2FA70 /* Build configuration list for PBXNativeTarget "MeatHeatTests" */;
+			buildPhases = (
+				4BF477C81326CAE56C54CE57 /* [CP] Check Pods Manifest.lock */,
+				FC530C7722777E5C00A2FA70 /* Sources */,
+				FC530C7822777E5C00A2FA70 /* Frameworks */,
+				FC530C7922777E5C00A2FA70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC530C7D22777E5C00A2FA70 /* PBXTargetDependency */,
+			);
+			name = MeatHeatTests;
+			productName = MeatHeatTests;
+			productReference = FC530C7B22777E5C00A2FA70 /* MeatHeatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC530C8522777E5C00A2FA70 /* MeatHeatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC530C9522777E5C00A2FA70 /* Build configuration list for PBXNativeTarget "MeatHeatUITests" */;
+			buildPhases = (
+				F1353BD7B5F56A2D00E035B1 /* [CP] Check Pods Manifest.lock */,
+				FC530C8222777E5C00A2FA70 /* Sources */,
+				FC530C8322777E5C00A2FA70 /* Frameworks */,
+				FC530C8422777E5C00A2FA70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC530C8822777E5C00A2FA70 /* PBXTargetDependency */,
+			);
+			name = MeatHeatUITests;
+			productName = MeatHeatUITests;
+			productReference = FC530C8622777E5C00A2FA70 /* MeatHeatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC530C5F22777E5B00A2FA70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = meatheat;
+				TargetAttributes = {
+					FC530C6622777E5B00A2FA70 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					FC530C7A22777E5C00A2FA70 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = FC530C6622777E5B00A2FA70;
+					};
+					FC530C8522777E5C00A2FA70 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = FC530C6622777E5B00A2FA70;
+					};
+				};
+			};
+			buildConfigurationList = FC530C6222777E5B00A2FA70 /* Build configuration list for PBXProject "MeatHeat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC530C5E22777E5B00A2FA70;
+			productRefGroup = FC530C6822777E5B00A2FA70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC530C6622777E5B00A2FA70 /* MeatHeat */,
+				FC530C7A22777E5C00A2FA70 /* MeatHeatTests */,
+				FC530C8522777E5C00A2FA70 /* MeatHeatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC530C6522777E5B00A2FA70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC530C7522777E5C00A2FA70 /* LaunchScreen.storyboard in Resources */,
+				FCD4B7992277A81800B1C77D /* GoogleService-Info.plist in Resources */,
+				FC530C7222777E5C00A2FA70 /* Assets.xcassets in Resources */,
+				FC530C7022777E5B00A2FA70 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC530C7922777E5C00A2FA70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC530C8422777E5C00A2FA70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0154C5B825FC6B449548D637 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeatHeat/Pods-MeatHeat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeatHeat/Pods-MeatHeat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BF477C81326CAE56C54CE57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeatHeatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B98AE1DDAEE6283BEF6717EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeatHeat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1353BD7B5F56A2D00E035B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeatHeatUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC530C6322777E5B00A2FA70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCFF99EA2277B34100BB7964 /* Notifications.swift in Sources */,
+				FC530C6D22777E5B00A2FA70 /* ViewController.swift in Sources */,
+				FCFF99EC2277B5AB00BB7964 /* Client.swift in Sources */,
+				FC530C6B22777E5B00A2FA70 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC530C7722777E5C00A2FA70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC530C8022777E5C00A2FA70 /* MeatHeatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC530C8222777E5C00A2FA70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC530C8B22777E5C00A2FA70 /* MeatHeatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC530C7D22777E5C00A2FA70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC530C6622777E5B00A2FA70 /* MeatHeat */;
+			targetProxy = FC530C7C22777E5C00A2FA70 /* PBXContainerItemProxy */;
+		};
+		FC530C8822777E5C00A2FA70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC530C6622777E5B00A2FA70 /* MeatHeat */;
+			targetProxy = FC530C8722777E5C00A2FA70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC530C6E22777E5B00A2FA70 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC530C6F22777E5B00A2FA70 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC530C7322777E5C00A2FA70 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC530C7422777E5C00A2FA70 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC530C8D22777E5C00A2FA70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC530C8E22777E5C00A2FA70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC530C9022777E5C00A2FA70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFFAD4FA19E4F8637E9EEE6A /* Pods-MeatHeat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MeatHeat/MeatHeat.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U87Q9C377E;
+				INFOPLIST_FILE = MeatHeat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.meatheat.MeatHeat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC530C9122777E5C00A2FA70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F5130195984B77176A66C15 /* Pods-MeatHeat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MeatHeat/MeatHeat.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U87Q9C377E;
+				INFOPLIST_FILE = MeatHeat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.meatheat.MeatHeat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FC530C9322777E5C00A2FA70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCFC19CF1A1CB833CEDDFF90 /* Pods-MeatHeatTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U87Q9C377E;
+				INFOPLIST_FILE = MeatHeatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.meatheat.MeatHeatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeatHeat.app/MeatHeat";
+			};
+			name = Debug;
+		};
+		FC530C9422777E5C00A2FA70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DF0902FBB9EDF02405CC15F /* Pods-MeatHeatTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U87Q9C377E;
+				INFOPLIST_FILE = MeatHeatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.meatheat.MeatHeatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeatHeat.app/MeatHeat";
+			};
+			name = Release;
+		};
+		FC530C9622777E5C00A2FA70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0BC9925E159FF39ABC003D8 /* Pods-MeatHeatUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U87Q9C377E;
+				INFOPLIST_FILE = MeatHeatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.meatheat.MeatHeatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeatHeat;
+			};
+			name = Debug;
+		};
+		FC530C9722777E5C00A2FA70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAE7F62054CC1BA8A5630729 /* Pods-MeatHeatUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U87Q9C377E;
+				INFOPLIST_FILE = MeatHeatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.meatheat.MeatHeatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeatHeat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC530C6222777E5B00A2FA70 /* Build configuration list for PBXProject "MeatHeat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC530C8D22777E5C00A2FA70 /* Debug */,
+				FC530C8E22777E5C00A2FA70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC530C8F22777E5C00A2FA70 /* Build configuration list for PBXNativeTarget "MeatHeat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC530C9022777E5C00A2FA70 /* Debug */,
+				FC530C9122777E5C00A2FA70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC530C9222777E5C00A2FA70 /* Build configuration list for PBXNativeTarget "MeatHeatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC530C9322777E5C00A2FA70 /* Debug */,
+				FC530C9422777E5C00A2FA70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC530C9522777E5C00A2FA70 /* Build configuration list for PBXNativeTarget "MeatHeatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC530C9622777E5C00A2FA70 /* Debug */,
+				FC530C9722777E5C00A2FA70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC530C5F22777E5B00A2FA70 /* Project object */;
+}
