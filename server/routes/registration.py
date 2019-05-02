@@ -1,5 +1,5 @@
 from flask import json
-from server import app
+from server.app import app
 from server.cache.user import fid_add_device, fid_add_controller
 from server.cache.device import all_devices
 

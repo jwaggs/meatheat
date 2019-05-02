@@ -1,5 +1,6 @@
 from flask import request, abort, json
-from server import app, all_devices
+from server.app import app
+from server.cache.device import all_devices
 from server.messaging import send_data_to_device
 
 

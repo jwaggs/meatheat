@@ -3,7 +3,7 @@ import time
 
 
 def run_mock_controller():
-    """Simulate data coming from a controller such as a raspberry pi"""
+    """Simulate (mock) data coming from a controller such as a raspberry pi"""
     url = 'https://meatheat.herokuapp.com/controllers/1/state/'
     for i in range(150, 160):
         data = [
