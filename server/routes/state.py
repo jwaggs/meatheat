@@ -11,6 +11,7 @@ def meat_heat(controller):
     if not data:
         abort(400)
 
+    app.logger.info(f'temp: {data["probe_temp"]} internal {data["probe_internal"]}')
     # TODO: change to controller_devices.
     for device in all_devices():
         send_data_to_device(data, device)
