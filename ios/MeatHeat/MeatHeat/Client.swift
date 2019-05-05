@@ -35,8 +35,18 @@ class MeatHeatClient {
         payload["low"] = low
         payload["high"] = high
         
-        let url = "https://meatheat.herokuapp.com/threshold/"
-        Alamofire.request(url, method: .post).responseData { (responseData) in
+        let url = URL.init(string: "https://meatheat.herokuapp.com/threshold/")
+        var request = URLRequest(url: url!)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+        
+        guard let data = try? JSONEncoder().encode(payload) else {
+            print("ERROR ENCODING DATA")
+            return
+        }
+        request.httpBody = data
+        
+        Alamofire.request(request).responseData { (responseData) in
             if responseData.response?.statusCode != 200 {
                 print("error with code: \(responseData.response?.statusCode ?? -1) sending threshold to server.")
             }
