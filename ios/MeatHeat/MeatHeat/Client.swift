@@ -29,4 +29,17 @@ class MeatHeatClient {
             }
         }
     }
+    
+    public func threshold(low: Int?, high: Int?) {
+        var payload: [String:Int?] = [:]
+        payload["low"] = low
+        payload["high"] = high
+        
+        let url = "https://meatheat.herokuapp.com/threshold/"
+        Alamofire.request(url, method: .post).responseData { (responseData) in
+            if responseData.response?.statusCode != 200 {
+                print("error with code: \(responseData.response?.statusCode ?? -1) sending threshold to server.")
+            }
+        }
+    }
 }

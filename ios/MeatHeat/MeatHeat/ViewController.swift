@@ -9,13 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var LabelProbeLow: UIButton!
+
+    @IBOutlet weak var ProbeHigh: UITextField!
+    @IBOutlet weak var ProbeLow: UITextField!
     @IBOutlet weak var LabelProbeCurrent: UILabel!
-    @IBOutlet weak var LabelProbeHigh: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
+        
+        //Looks for single or multiple taps to dismiss number pad
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Calls this function when the tap is recognized.
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+        threshold()
     }
 
     @objc func onDidReceiveData(_ notification:Notification) {
@@ -31,7 +45,7 @@ class ViewController: UIViewController {
         }
         
         do {
-            if let payload = try JSONSerialization.jsonObject(with: jsonData, options : .allowFragments) as? [Dictionary<String,Any>] {
+            if let payload = try JSONSerialization.jsonObject(with: jsonData, options : .allowFragments) as? Dictionary<String,Any> {
                 handle(payload)
             } else {
                 print("error: bad json")
@@ -42,12 +56,18 @@ class ViewController: UIViewController {
         
     }
     
-    func handle(_ payload: [Dictionary<String,Any>]) {
-        guard let temp = payload[0]["temp"] as? Float else {
-            print("warning: payload does not have temp")
-            return
+    func handle(_ payload: Dictionary<String,Any>) {
+        let _ = payload["temp"] as? Double
+        let tempDisplay = String(describing: payload["temp"]!)
+        DispatchQueue.main.async {
+            self.LabelProbeCurrent.text = tempDisplay
         }
-        LabelProbeCurrent.text = String(temp)
+    }
+    
+    func threshold() {
+        let low = Int(self.ProbeLow.text!)
+        let high = Int(self.ProbeHigh.text!)
+        MeatHeatClient.shared.threshold(low: low, high: high)
     }
 }
 

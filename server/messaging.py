@@ -20,3 +20,25 @@ def send_data_to_device(data, device):
     except Exception as e:
         # TODO: should remove device token from redis if the exception is related to it being invalid.
         app.logger.error(f'error sending message to device: {device} with error: {e}')
+
+
+def send_push_to_device(device: str, temp, low, high: int):
+    message = messaging.Message(
+        notification=messaging.Notification(
+            title='THRESHOLD',
+            body=f'{temp} is outside of the {low} - {high} range!',
+        ),
+        apns=messaging.APNSConfig(
+            payload=messaging.APNSPayload(
+                aps=messaging.Aps(badge=1),
+            ),
+        ),
+        token=device,
+    )
+
+    try:
+        message_id = messaging.send(message)
+        app.logger.info(f'successfully sent push {message_id} to device: {device}')
+    except Exception as e:
+        # TODO: should remove device token from redis if the exception is related to it being invalid.
+        app.logger.error(f'error sending push to device: {device} with error: {e}')
