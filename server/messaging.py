@@ -25,12 +25,12 @@ def send_data_to_device(data, device):
 def send_push_to_device(device: str, temp, low, high: int):
     message = messaging.Message(
         notification=messaging.Notification(
-            title='THRESHOLD',
+            title='MEATHEAT',
             body=f'{temp} is outside of the {low} - {high} range!',
         ),
         apns=messaging.APNSConfig(
             payload=messaging.APNSPayload(
-                aps=messaging.Aps(badge=1),
+                aps=messaging.Aps(badge=1, sound='default'),
             ),
         ),
         token=device,

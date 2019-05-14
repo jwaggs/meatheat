@@ -4,6 +4,7 @@ from server.cache.device import all_devices
 from server.messaging import send_data_to_device, send_push_to_device
 from server.cache.threshold import get_thresholds
 
+
 @app.route('/controllers/<controller>/state/', methods=['POST', 'GET'])  # TODO: remove GET from methods
 def meat_heat(controller):
     app.logger.info(f'meat_heat endpoint hit for controller: {controller}')
@@ -23,7 +24,7 @@ def meat_heat(controller):
             if temp < low or temp > high:
                 app.logger.info(f'temp {temp} outside of threshold {low} - {high}!')
                 send_push_to_device(device, temp, low, high)
-        except:
-            app.logger.error('caught exception handling thresholds.')
+        except Exception as e:
+            app.logger.error(f'caught exception handling thresholds. {e}')
 
     return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
