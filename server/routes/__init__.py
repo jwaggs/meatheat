@@ -1,7 +1,7 @@
-from .registration import *
+from .pairing import *
 from .state import *
-from .webhook import *
 from .threshold import *
+from .webhook import *
 from flask import json
 from server.app import app
 
