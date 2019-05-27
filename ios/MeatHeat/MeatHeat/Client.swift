@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import FirebaseMessaging
 
 class MeatHeatClient {
     
@@ -22,7 +23,8 @@ class MeatHeatClient {
             return
         }
         
-        let url = "https://meatheat.herokuapp.com/devices/\(deviceRegistrationToken)/"
+        //let url = "https://meatheat.herokuapp.com/devices/\(deviceRegistrationToken)/"
+        let url = "https://meatheat.herokuapp.com/pair/device/\(deviceRegistrationToken)/controller/1/"
         Alamofire.request(url, method: .post).responseData { (responseData) in
             if responseData.response?.statusCode != 200 {
                 print("error with code: \(responseData.response?.statusCode ?? -1) registering device token with server.")
@@ -31,7 +33,15 @@ class MeatHeatClient {
     }
     
     public func threshold(low: Int?, high: Int?) {
-        var payload: [String:Int?] = [:]
+        guard let fcmToken = Messaging.messaging().fcmToken else {
+            print("No fcmToken found to set threshold with")
+            return
+        }
+        
+        var payload: [String:Any] = [:]
+        payload["device"] = fcmToken
+        payload["controller"] = 1  // TODO: put dynamic value
+        payload["probe"] = 1  // TODO: put dynamic value
         payload["low"] = low
         payload["high"] = high
         

@@ -57,7 +57,8 @@ class ViewController: UIViewController {
     }
     
     func handle(_ payload: Dictionary<String,Any>) {
-        let _ = payload["temp"] as? Double
+        // let _ = payload["temp"] as? Double
+        //let probe1 = payload[0]
         let tempDisplay = String(describing: payload["temp"]!)
         DispatchQueue.main.async {
             self.LabelProbeCurrent.text = tempDisplay
