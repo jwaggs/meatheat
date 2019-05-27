@@ -14,7 +14,7 @@ def send(data: dict, device: str, controller: str, push_temp: float = None):
     if push_temp and not should_throttle_push(device, controller):
         # don't send another push to this device about this controller for num seconds.
         set_push_throttle(device, controller, seconds=30)
-        # add APNS
+        # add push notification to message
         message.notification = messaging.Notification(
             title='MeatHeat',
             body=f'{push_temp}° is outside of the range!',

@@ -12,6 +12,10 @@ def meat_heat(controller):
     if not data:
         abort(400)
 
+    for probe_data in data:
+        probe, temp = probe_data['probe'], probe_data['temp']
+        app.logger.info(f'TEMP: {temp}')
+
     for device in controller_devices(controller):
         for probe_data in data:
             try:
