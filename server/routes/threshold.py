@@ -11,8 +11,8 @@ def threshold():
     if not data:
         abort(400)
 
-    controller = 1  # data['controller']
-    probe = 1  # data['probe']
+    controller = data['controller']
+    probe = data['probe']
     device = data['device']
 
     low, high = None, None
