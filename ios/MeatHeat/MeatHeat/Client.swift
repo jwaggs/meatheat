@@ -49,17 +49,25 @@ class MeatHeatClient {
         var request = URLRequest(url: url!)
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
-        
-        guard let data = try? JSONEncoder().encode(payload) else {
-            print("ERROR ENCODING DATA")
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: payload, options: .prettyPrinted)
+            request.httpBody = jsonData
+            Alamofire.request(request).responseData { (responseData) in
+                if responseData.response?.statusCode != 200 {
+                    print("error with code: \(responseData.response?.statusCode ?? -1) sending threshold to server.")
+                }
+            }
+        } catch {
+            print("error encoding json for threshold")
             return
         }
-        request.httpBody = data
         
-        Alamofire.request(request).responseData { (responseData) in
-            if responseData.response?.statusCode != 200 {
-                print("error with code: \(responseData.response?.statusCode ?? -1) sending threshold to server.")
-            }
-        }
+//        guard let data = try? JSONEncoder().encode(payload) else {
+//            print("ERROR ENCODING DATA")
+//            return
+//        }
+        
+        
+        
     }
 }
